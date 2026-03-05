@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: concesionario
+
+#Conection to SQL
+datasource: 
+  url: jdbc:mysql://localhost:3306/concesionario
+  username: root
+  password: 1234
+  driver-class-name: com.mysql.cj.jdbc.driver
+
+#Port configuration
+
+server: 
+  port: 9090
+  servlet: 
+    context-path: /api/v1/concesionario #context path for all the aplication
+
+loggin: 
+  level: #logs levels
+    org.springframework.web: DEBUG # Detailed logs for the website
+    org.springframework.web.jdbc.core.jdbcTemplate: DEBUG #Show queries SQL
+    org.springframework.web.jdbc.core.statementCreatorUtils: TRACE #view the values of the query parameters
